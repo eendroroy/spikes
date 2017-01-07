@@ -44,7 +44,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'spike=spikes:spike.main',
+            'spike=spikes:main',
         ],
     },
 )
