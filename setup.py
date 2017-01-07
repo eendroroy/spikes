@@ -15,7 +15,7 @@ def find_packages(*args, **kwargs):
 
 setup(
     name='spikes',
-    version='0.0.1',
+    version='0.0.2',
     description='A command line tool to display barchart.',
     long_description=long_description,
     url='https://github.com/eendroroy/spikes',
