@@ -16,4 +16,3 @@ def spike_data(data, rows):
             spiked[rest_row].append(0)
 
     return spiked
-
