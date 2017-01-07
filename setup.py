@@ -17,7 +17,7 @@ setup(
     author_email='eendroroy@gmail.com',
     license='MIT',
     classifiers=[
-        'Development Status :: 0.0.1 - Alpha',
+        'Development Status :: 3 - Alpha',
         'Intended Audience :: End Users/Desktop',
         'Topic :: Scientific/Engineering :: Visualization',
         'License :: OSI Approved :: MIT License',
