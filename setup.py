@@ -7,6 +7,12 @@ here = path.abspath(path.dirname(__file__))
 with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
+
+def find_packages(*args, **kwargs):
+    return [
+        'spikes',
+    ]
+
 setup(
     name='spikes',
     version='0.0.1',
