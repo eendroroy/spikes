@@ -1,4 +1,4 @@
-# spikes [![PyPI version](https://badge.fury.io/py/spikes.svg)](https://badge.fury.io/py/spikes)
+# spikes [![PyPI version](https://badge.fury.io/py/spikes.svg)](https://badge.fury.io/py/spikes) [![Build Status](https://travis-ci.org/eendroroy/spikes.svg?branch=master)](https://travis-ci.org/eendroroy/spikes)
 A command line tool to display bar-chart.
 
 ## installation
