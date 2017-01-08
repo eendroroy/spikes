@@ -12,7 +12,7 @@ def normalize(data, rows=1):
     normalized_list = list()
 
     max_item = max(data)
-    min_item = min(data)
+    min_item = 0
     diff = float(max_item) - float(min_item)
 
     if diff == 0:
