@@ -13,7 +13,7 @@ Usage: spike [-l <number_of_lines>] list_of_numbers]
 def spike(args=sys.argv):
 
     try:
-        opts, args = getopt.getopt(args[1:], "l:")
+        opts, args = getopt.getopt(args, "l:")
         rows = 1
         for opt, arg in opts:
             if opt == '-l':
@@ -43,7 +43,13 @@ def spike(args=sys.argv):
 
 def main():
     try:
-        sys.exit(spike(sys.argv))
+        args = sys.argv[1:]
+        if args.__len__() < 1:
+            args = sys.stdin.read().strip().split(" ")
+        if args.__len__() < 1:
+            sys.stderr.write(USAGE)
+            return 1
+        sys.exit(spike(args))
     except KeyboardInterrupt:
         sys.exit(1)
 

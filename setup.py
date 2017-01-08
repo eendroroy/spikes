@@ -9,13 +9,11 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 
 def find_packages(*args, **kwargs):
-    return [
-        'spikes',
-    ]
+    return ['spikes']
 
 setup(
     name='spikes',
-    version='0.0.2',
+    version='0.0.3',
     description='A command line tool to display barchart.',
     long_description=long_description,
     url='https://github.com/eendroroy/spikes',

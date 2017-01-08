@@ -1,7 +1,9 @@
 # coding=utf-8
+from spikes.CONFIGS import BARS
+
+
 def print_spike(l):
-    chars = [' ', '▁', '▂', '▃', '▄', '▅', '▆', '▇', '█']
     spike = ""
     for n in l:
-        spike += chars[n]
+        spike += BARS[n]
     print spike
