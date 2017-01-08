@@ -1,5 +1,7 @@
-README for Pygments
-===================
+README for Spikes
+=================
+
+A command line tool to display bar-chart.
 
 Installing
 ----------

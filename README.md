@@ -1,5 +1,5 @@
 # spikes
-a commandline barchart tool
+A command line tool to display bar-chart.
 
 ## installation
 use pip

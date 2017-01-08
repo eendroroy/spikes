@@ -13,8 +13,8 @@ def find_packages(*args, **kwargs):
 
 setup(
     name='spikes',
-    version='0.0.4',
-    description='A command line tool to display barchart.',
+    version='0.0.5',
+    description='A command line tool to display bar-chart.',
     long_description=long_description,
     url='https://github.com/eendroroy/spikes',
     author='Indrajit Roy',

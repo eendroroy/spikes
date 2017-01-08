@@ -45,10 +45,11 @@ def main():
     try:
         args = sys.argv[1:]
         if args.__len__() < 1:
-            args = sys.stdin.read().strip().split(" ")
+            args = sys.stdin.read().strip().replace("\n", " ").split(" ")
         if args.__len__() < 1:
             sys.stderr.write(USAGE)
             return 1
+        args = filter(None, args)
         sys.exit(spike(args))
     except KeyboardInterrupt:
         sys.exit(1)
