@@ -7,6 +7,6 @@ python:
 # command to install dependencies
 install:
   - pip install .
-   - pip install -r testRequirements.txt
+  - pip install -r testRequirements.txt
 # command to run tests
 script: 'mamba'
