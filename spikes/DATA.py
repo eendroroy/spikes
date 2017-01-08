@@ -13,3 +13,6 @@ BAR_INDEX = 8
 #     '\033[1;37m\033[1;107m \033[0m',
 # ]
 BARS = [' ', '▁', '▂', '▃', '▄', '▅', '▆', '▇', '█']
+USAGE = """
+Usage: spike [-l <number_of_lines>] list_of_numbers]
+"""

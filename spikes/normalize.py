@@ -1,13 +1,8 @@
 # coding=utf-8
-from spikes.CONFIGS import BAR_INDEX
+from spikes.DATA import BAR_INDEX
 
 
 def normalize(data, rows=1):
-    """
-
-    :type rows: int
-    :type data: list
-    """
     upper_limit = rows * BAR_INDEX
     normalized_list = list()
 

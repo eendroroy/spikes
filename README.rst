@@ -1,7 +1,7 @@
 README for Spikes
 =================
 
-A command line tool to display bar-chart.
+A tool to display bar-chart anywhere.
 
 Installing
 ----------

@@ -1,9 +1,9 @@
 # coding=utf-8
-from spikes.CONFIGS import BARS
+from spikes.DATA import BARS
 
 
-def print_spike(l):
+def print_spike(row):
     spike = ""
-    for n in l:
-        spike += BARS[n]
-    print spike
+    for bar in row:
+        spike += BARS[bar]
+    return spike

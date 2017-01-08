@@ -1,5 +1,5 @@
 # coding=utf-8
-from spikes.CONFIGS import BAR_INDEX
+from spikes.DATA import BAR_INDEX
 
 
 def spike_data(data, rows):
@@ -8,7 +8,7 @@ def spike_data(data, rows):
         spiked.append(list())
 
     for s in data:
-        full_rows = s/BAR_INDEX
+        full_rows = int(s/BAR_INDEX)
         fraction_val = s - (full_rows * BAR_INDEX)
 
         for full_row in range(0, full_rows):
