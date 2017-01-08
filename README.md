@@ -1,4 +1,4 @@
-# spikes
+# spikes [![PyPI version](https://badge.fury.io/py/spikes.svg)](https://badge.fury.io/py/spikes)
 A command line tool to display bar-chart.
 
 ## installation
