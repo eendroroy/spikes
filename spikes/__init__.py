@@ -7,7 +7,8 @@ import sys
 from spikes.spike import Spike, spike
 
 
-def red_args():
+def read_args():
+    usage = Spike.usage()
     try:
         opts, args = getopt.getopt(sys.argv[1:], 'l:')
         rows = 1
@@ -15,20 +16,20 @@ def red_args():
             if opt == '-l':
                 rows = int(arg)
             else:
-                sys.stderr.write(Spike.usage())
+                sys.stderr.write(usage)
                 sys.exit(128)
     except getopt.GetoptError:
-        sys.stderr.write(Spike.usage())
+        sys.stderr.write(usage)
         sys.exit(2)
     except ValueError:
-        sys.stderr.write(Spike.usage())
+        sys.stderr.write(usage)
         sys.exit(64)
 
     return args, rows
 
 
 def main():
-    args, rows = red_args()
+    args, rows = read_args()
     try:
         if args.__len__() < 1:
             args = sys.stdin.read().strip().replace('\n', ' ').split(' ')
@@ -36,7 +37,7 @@ def main():
             sys.stderr.write(Spike.usage())
             return 1
         args = list(filter(None, args))
-        print(spike(args, rows=rows))
+        print(spike(args, rows))
         sys.exit(0)
     except KeyboardInterrupt:
         sys.exit(1)

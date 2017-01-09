@@ -21,9 +21,7 @@ class Spike(object):
         unichr(9607),
         unichr(9608),
     ]
-    __USAGE = """
-    Usage: spike [-l <number_of_lines>] list_of_numbers]
-    """
+    __USAGE = "Usage: spike [-l <number_of_lines>] list_of_numbers]"
 
     @staticmethod
     def usage():
@@ -34,20 +32,26 @@ class Spike(object):
         upper_limit = rows * Spike.__BAR_INDEX
         normalized_list = list()
 
-        max_item = max(data)
-        min_item = 0
-        diff = float(max_item) - float(min_item)
+        max_item = float(max(data))
 
-        if diff == 0:
-            for item in data:
-                normalized_list.append((item if item < upper_limit else upper_limit))
+        if max_item == float(0):
+            Spike.__normalize_zero_list(normalized_list, data, upper_limit)
         else:
-            for item in data:
-                norm = int(round((float(item) - float(min_item)) / diff * upper_limit, 0))
-                adjusted_norm = (norm if norm > 0 else 1)
-                normalized_list.append((int(item) if item == 0 else adjusted_norm))
+            Spike.__normalize_positive_list(normalized_list, data, max_item, upper_limit)
 
         return normalized_list
+
+    @staticmethod
+    def __normalize_zero_list(n_list, data, upper_limit):
+        for item in data:
+            n_list.append((item if item < upper_limit else upper_limit))
+
+    @staticmethod
+    def __normalize_positive_list(n_list, data, max_item, upper_limit):
+        for item in data:
+            norm = int(round((float(item)) / max_item * upper_limit, 0))
+            adjusted_norm = (norm if norm > 0 else 1)
+            n_list.append((int(item) if item == 0 else adjusted_norm))
 
     @staticmethod
     def __spike_data(data, rows):
@@ -75,29 +79,32 @@ class Spike(object):
             _spike += Spike.__BARS[bar]
         return _spike
 
-    def spike(self, data, rows=1):
-        try:
-            data = list(map(int, data))
-        except ValueError:
-
-            sys.stderr.write(Spike.__USAGE)
-            sys.exit(65)
-
-        normalized_data = self.__normalize(data, rows=rows)
-        spiked_data = self.__spike_data(normalized_data, rows=rows)
-        spiked_data.reverse()
+    @staticmethod
+    def make_spike(spiked_data):
         spikes = ''
         for index, row in enumerate(spiked_data):
-            spikes += self.__print_spike(row)
+            spikes += Spike.__print_spike(row)
             if index + 1 < len(spiked_data):
                 spikes += '\n'
 
         return spikes
 
+    @staticmethod
+    def get_spike(data, rows=1):
+        try:
+            data = list(map(int, data))
+        except ValueError:
+            sys.stderr.write(Spike.__USAGE)
+            sys.exit(65)
+
+        spiked_data = Spike.__spike_data(Spike.__normalize(data, rows), rows)
+        spiked_data.reverse()
+
+        return Spike.make_spike(spiked_data)
+
 
 def spike(data, rows=1):
-    s = Spike()
-    spikes = s.spike(data, rows)
+    spikes = Spike.get_spike(data, rows)
     return spikes
 
 
