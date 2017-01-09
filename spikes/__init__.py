@@ -36,7 +36,7 @@ def main():
             sys.stderr.write(Spike.usage())
             return 1
         args = list(filter(None, args))
-        print spike(args, rows=rows)
+        print(spike(args, rows=rows))
         sys.exit(0)
     except KeyboardInterrupt:
         sys.exit(1)
