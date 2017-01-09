@@ -3,6 +3,8 @@
 [![Code Climate](https://codeclimate.com/github/eendroroy/spikes/badges/gpa.svg)](https://codeclimate.com/github/eendroroy/spikes)
 # spikes
 
+[![Join the chat at https://gitter.im/eendroroy/spikes](https://badges.gitter.im/eendroroy/spikes.svg)](https://gitter.im/eendroroy/spikes?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 A tool to display bar-chart anywhere.
 
 ## installation
