@@ -1,5 +1,5 @@
 virtualenv
-mamba
+nose
 radon
 codevalidator
 twine

@@ -85,5 +85,3 @@ class Cli(object):
             else:
                 Cli.__sys_exit(usage, 128)
         return arguments, rows
-
-

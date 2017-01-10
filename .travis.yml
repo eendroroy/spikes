@@ -11,4 +11,4 @@ install:
   - pip install -r requirements/test.txt
   - pip install .
 # command to run tests
-script: 'mamba'
+script: 'nosetests'

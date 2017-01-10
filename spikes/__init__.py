@@ -6,5 +6,3 @@ from spikes.commandline import Cli
 
 def main():
     Cli.run()
-
-
