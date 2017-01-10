@@ -112,5 +112,3 @@ class Spike(object):
 def spike(data, rows=1):
     spikes = Spike.get_spike(data, rows)
     return spikes
-
-
