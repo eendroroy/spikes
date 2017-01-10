@@ -1,0 +1,6 @@
+virtualenv
+mamba
+radon
+codevalidator
+twine
+
