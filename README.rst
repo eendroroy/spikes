@@ -15,6 +15,8 @@ Usage
 
     ``spike 2 4 3 7 2 9``
 
+    ``spike .1 .5 .9 2.5``
+
 use more than 1 line to display the chart
 
     ``spike -l 3   2 4 3 7 2 9``

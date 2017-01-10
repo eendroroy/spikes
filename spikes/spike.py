@@ -44,14 +44,14 @@ class Spike(object):
     @staticmethod
     def __normalize_zero_list(n_list, data, upper_limit):
         for item in data:
-            n_list.append((item if item < upper_limit else upper_limit))
+            n_list.append((int(item) if item < upper_limit else upper_limit))
 
     @staticmethod
     def __normalize_positive_list(n_list, data, max_item, upper_limit):
         for item in data:
-            norm = int(round((float(item)) / max_item * upper_limit, 0))
+            norm = int(round((float(item) / max_item) * upper_limit, 0))
             adjusted_norm = (norm if norm > 0 else 1)
-            n_list.append((int(item) if item == 0 else adjusted_norm))
+            n_list.append((int(item) if item == float(0) else adjusted_norm))
 
     @staticmethod
     def __spike_data(data, rows):
@@ -92,7 +92,7 @@ class Spike(object):
     @staticmethod
     def get_spike(data, rows=1):
         try:
-            data = list(map(int, data))
+            data = list(map(float, data))
         except ValueError:
             sys.stderr.write(Spike.__USAGE)
             sys.exit(65)

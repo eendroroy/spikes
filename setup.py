@@ -14,7 +14,7 @@ def find_packages(*args, **kwargs):
 
 setup(
     name='spikes',
-    version='0.0.8',
+    version='0.1.0',
     description='A command line tool to display bar-chart.',
     long_description=long_description,
     url='https://github.com/eendroroy/spikes',

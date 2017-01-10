@@ -1,5 +1,10 @@
+import sys
+from io import StringIO
+
 import spikes
 
+sys.stdin = StringIO()
+sys.stderr = StringIO()
 
 spikes.Spike.usage()
 spikes.spike([1, 2, 3, 4, 5, 6, 7, 8], 0)
