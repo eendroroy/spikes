@@ -4,6 +4,7 @@
 [![PyPI version](https://badge.fury.io/py/spikes.svg)](https://badge.fury.io/py/spikes)
 [![Build Status](https://travis-ci.org/eendroroy/spikes.svg?branch=master)](https://travis-ci.org/eendroroy/spikes)
 [![Code Climate](https://codeclimate.com/github/eendroroy/spikes/badges/gpa.svg)](https://codeclimate.com/github/eendroroy/spikes)
+[![Analytics](https://ga-beacon.appspot.com/UA-90216724-1/spikes/readme)](https://github.com/eendroroy/spikes)
 
 A tool to display bar-chart anywhere.
 
