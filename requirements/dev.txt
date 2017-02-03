@@ -2,5 +2,6 @@ virtualenv
 nose
 radon
 codevalidator
+codecov
 twine
 
