@@ -1,5 +1,7 @@
 virtualenv
 nose
+coverage
+pylint
 radon
 codevalidator
 codecov

@@ -19,6 +19,18 @@ class Cli(object):
         sys.exit(status)
 
     @staticmethod
+    def __parse_arguments(opts, args, arguments, usage):
+        rows = None
+        for arg in args:
+            arguments += re.split(Cli.__splitter, arg)
+        for opt, arg in opts:
+            if opt == '-l':
+                rows = int(arg)
+            else:
+                Cli.__sys_exit(usage, 128)
+        return arguments, rows
+
+    @staticmethod
     def __read_argv():
         usage = Spike.usage()
         arguments = []
@@ -73,15 +85,3 @@ class Cli(object):
             sys.exit(0)
         except KeyboardInterrupt:
             sys.exit(1)
-
-    @staticmethod
-    def __parse_arguments(opts, args, arguments, usage):
-        rows = None
-        for arg in args:
-            arguments += re.split(Cli.__splitter, arg)
-        for opt, arg in opts:
-            if opt == '-l':
-                rows = int(arg)
-            else:
-                Cli.__sys_exit(usage, 128)
-        return arguments, rows
