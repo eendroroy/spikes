@@ -1,19 +1,25 @@
-# spikes
+**spikes**
+==========
 
-[![Join the chat at https://gitter.im/eendroroy/spikes](https://badges.gitter.im/eendroroy/spikes.svg)](https://gitter.im/eendroroy/spikes?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![PyPI version](https://badge.fury.io/py/spikes.svg)](https://badge.fury.io/py/spikes)
-[![Build Status](https://travis-ci.org/eendroroy/spikes.svg?branch=master)](https://travis-ci.org/eendroroy/spikes)
-[![Code Climate](https://codeclimate.com/github/eendroroy/spikes/badges/gpa.svg)](https://codeclimate.com/github/eendroroy/spikes)
-[![codecov](https://codecov.io/gh/eendroroy/spikes/branch/master/graph/badge.svg)](https://codecov.io/gh/eendroroy/spikes)
+.. image:: https://badges.gitter.im/eendroroy/spikes.svg
+    :target: https://gitter.im/eendroroy/spikes?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+.. image:: https://badge.fury.io/py/spikes.svg
+    :target: https://badge.fury.io/py/spikes
+.. image:: https://travis-ci.org/eendroroy/spikes.svg?branch=master
+    :target: https://travis-ci.org/eendroroy/spikes
+.. image:: https://codeclimate.com/github/eendroroy/spikes/badges/gpa.svg
+    :target: https://codeclimate.com/github/eendroroy/spikes)
+.. image:: https://codecov.io/gh/eendroroy/spikes/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/eendroroy/spikes
 
 A tool to display bar-chart anywhere.
 
-## installation
+**installation**
 use pip
 
     $ pip install spikes
 
-## usage
+**usage**
 
     $ spike 2 4 3 7 2 9
     ▂▄▃▆▂█
@@ -35,7 +41,7 @@ read from stdin
     > # press Ctrl-D
     ▂▄▃▆▂█
 
-## use with git
+**use with git**
 commit count per day:
     
     $ git log | grep Date | awk '{print " : "$4" "$3" "$6}' | uniq -c | awk '{print $1}' | spike
