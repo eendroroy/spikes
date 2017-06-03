@@ -74,3 +74,11 @@ commit count per author
 .   █
 .   █  ▁
 .   █▅▁█▅▂▆▄█
+
+
+**license**
+
+*MIT*
+
+.. image:: https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Feendroroy%2Fspikes.svg?type=large
+    :target: https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Feendroroy%2Fspikes?ref=badge_large
